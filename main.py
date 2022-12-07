@@ -3,14 +3,14 @@ import sys
 from subprocess import run
 
 # SDL 
-SDL_LIB='C:\Users\21264\Documents\libraries\SDL2-2.24.2\lib\x64'
-SDL_INCLUDE='C:\Users\21264\Documents\libraries\SDL2-2.24.2\include'
-SDL_DLL='C:\Users\21264\Documents\libraries\SDL2-2.24.2\lib\x64\SDL2.dll'
+SDL_LIB=r'C:\Users\21264\Documents\libraries\SDL2-2.24.2\lib\x64'
+SDL_INCLUDE=r'C:\Users\21264\Documents\libraries\SDL2-2.24.2\include'
+SDL_DLL=r'C:\Users\21264\Documents\libraries\SDL2-2.24.2\lib\x64\SDL2.dll'
 
 # SDL image
-SDL_IMG_INCLUDE='C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\include'
-SDL_IMG_LIB='C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\lib\x64\SDL2_image.lib'
-SDL_IMG_DLL='C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\lib\x64\SDL2_image.lib\SDL2_image.dll'
+SDL_IMG_INCLUDE=r'C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\include'
+SDL_IMG_LIB=r'C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\lib\x64\SDL2_image.lib'
+SDL_IMG_DLL=r'C:\Users\21264\Documents\libraries\SDL2_image-2.6.2\lib\x64\SDL2_image.lib\SDL2_image.dll'
 
 
 def run_command(command):
