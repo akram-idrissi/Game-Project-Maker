@@ -12,10 +12,15 @@ def get_args():
     if(len(args) == 2): return args[1]
 
 
+def mkdir(dir):
+    if(not os.path.exists()):
+        os.mkdir(dir)
+
+
 def main():
     pass
 
 
 if __name__ == '__main__':
-    get_args()
+    main()
 
