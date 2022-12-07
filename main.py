@@ -1,5 +1,6 @@
 import os 
-from subprocess import PIP, run
+import sys
+from subprocess import run
 
 
 def run_command():
@@ -7,7 +8,8 @@ def run_command():
 
 
 def get_args():
-    pass
+    args = sys.argv
+    if(len(args) == 2): return args[1]
 
 
 def main():
@@ -15,6 +17,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    get_args()
 
-    
