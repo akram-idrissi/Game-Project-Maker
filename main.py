@@ -20,7 +20,6 @@ def mkdir(dir):
 
 def main():
     path = get_args()
-    env = dotenv_values('.env')
 
     mkdir(path)
     os.chdir(path)
@@ -28,12 +27,12 @@ def main():
     mkdir('lib')
     mkdir('include')
 
-    run_command(f'COPY {env["SDL_LIB"]} lib')
-    run_command(f'COPY {env["SDL_IMG_LIB"]} lib')
-    run_command(f'COPY {env["SDL_INCLUDE"]} include')
-    run_command(f'COPY {env["SDL_IMG_INCLUDE"]} include')
-    run_command(f'COPY {env["SDL_DLL"]} .')
-    run_command(f'COPY {env["SDL_DLL"]} .')
+    run_command(f'COPY {SDL_LIB} lib')
+    run_command(f'COPY {SDL_IMG_LIB} lib')
+    run_command(f'COPY {SDL_INCLUDE} include')
+    run_command(f'COPY {SDL_IMG_INCLUDE} include')
+    run_command(f'COPY {SDL_DLL} .')
+    run_command(f'COPY {SDL_IMG_DLL} .')
  
 
 if __name__ == '__main__':
