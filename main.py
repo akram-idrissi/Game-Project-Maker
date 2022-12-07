@@ -18,8 +18,16 @@ def mkdir(dir):
 
 
 def main():
-    pass
+    path = get_args()
 
+    if(os.path.exists()):
+        os.chdir(path)
+        mkdir('lib')
+        mkdir('include')
+        run_command(f'COPY {SDL_LIB}, {SDL_IMG_LIB} lib')
+        run_command(f'COPY {SDL_INCLUDE}, {SDL_IMG_INCLUDE} include')
+        run_command(f'COPY {SDL_DLL}, {SDL_IMG_DLL} .')
+ 
 
 if __name__ == '__main__':
     main()
