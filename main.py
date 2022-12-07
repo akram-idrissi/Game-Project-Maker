@@ -3,8 +3,8 @@ import sys
 from subprocess import run
 
 
-def run_command():
-    pass
+def run_command(command):
+    run(command, shell=True)
 
 
 def get_args():
