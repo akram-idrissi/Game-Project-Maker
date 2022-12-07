@@ -14,7 +14,7 @@ def get_args():
 
 
 def mkdir(dir):
-    if(not os.path.exists()):
+    if(not os.path.exists(dir)):
         os.mkdir(dir)
 
 
