@@ -22,6 +22,9 @@ def main():
     path = get_args()
     env = dotenv_values('.env')
 
+    mkdir(path)
+    os.chdir(path)
+
     mkdir('lib')
     mkdir('include')
 
