@@ -1,6 +1,7 @@
 import os 
 import sys
 from subprocess import run
+from dotenv import dotenv_values
 
 
 def run_command(command):
@@ -19,14 +20,15 @@ def mkdir(dir):
 
 def main():
     path = get_args()
+    env = dotenv_values('.env')
 
     if(os.path.exists()):
         os.chdir(path)
         mkdir('lib')
         mkdir('include')
-        run_command(f'COPY {SDL_LIB}, {SDL_IMG_LIB} lib')
-        run_command(f'COPY {SDL_INCLUDE}, {SDL_IMG_INCLUDE} include')
-        run_command(f'COPY {SDL_DLL}, {SDL_IMG_DLL} .')
+        run_command(f'COPY {env["SDL_LIB"]}, {env["SDL_IMG_LIB"]} lib')
+        run_command(f'COPY {env["SDL_INCLUDE"]}, {env["SDL_IMG_INCLUDE"]} include')
+        run_command(f'COPY {env["SDL_DLL"]}, {env["SDL_IMG_DLL"]} .')
  
 
 if __name__ == '__main__':
