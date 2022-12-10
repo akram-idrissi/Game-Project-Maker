@@ -26,15 +26,7 @@ def main():
     mkdir(path)
     os.chdir(path)
 
-    mkdir('lib')
-    mkdir('include')
-
-    run_command(f'COPY {SDL_LIB} lib')
-    run_command(f'COPY {SDL_IMG_LIB} lib')
-    run_command(f'COPY {SDL_INCLUDE} include')
-    run_command(f'COPY {SDL_IMG_INCLUDE} include')
-    run_command(f'COPY {SDL_DLL} .')
-    run_command(f'COPY {SDL_IMG_DLL} .')
+    run_command(f'xcopy /E {TEMPLATE_PATH} {path}')
  
 
 if __name__ == '__main__':
