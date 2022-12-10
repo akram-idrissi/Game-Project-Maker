@@ -22,7 +22,7 @@ def mkdir(dir):
 
 def main():
     destination = get_args()
-    run_command(f'xcopy /E {SOURCE_PATH} {destination}')
+    run_command(f'xcopy /QCIE {SOURCE_PATH} {destination}')
  
 
 if __name__ == '__main__':
