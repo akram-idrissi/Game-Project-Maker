@@ -3,7 +3,7 @@ import sys
 from subprocess import run
 
 
-TEMPLATE_PATH='C:\_coding\Templates\games'
+SOURCE_PATH='C:\_coding\Templates\games'
 
 
 def run_command(command):
@@ -21,12 +21,12 @@ def mkdir(dir):
 
 
 def main():
-    path = get_args()
+    destination = get_args()
 
-    mkdir(path)
-    os.chdir(path)
+    mkdir(destination)
+    os.chdir(destination)
 
-    run_command(f'xcopy /E {TEMPLATE_PATH} {path}')
+    run_command(f'xcopy /E {SOURCE_PATH} {destination}')
  
 
 if __name__ == '__main__':
