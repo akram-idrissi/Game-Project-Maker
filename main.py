@@ -22,10 +22,6 @@ def mkdir(dir):
 
 def main():
     destination = get_args()
-
-    mkdir(destination)
-    os.chdir(destination)
-
     run_command(f'xcopy /E {SOURCE_PATH} {destination}')
  
 
